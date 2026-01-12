@@ -9,6 +9,7 @@ import java.util.List;
 public class MatrixFactory {
     /**
      * Create a new lib.Matrix builder.
+     *
      * @return builder
      */
     public static Builder newMatrix() {

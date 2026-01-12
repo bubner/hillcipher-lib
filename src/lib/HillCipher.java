@@ -8,8 +8,8 @@ public class HillCipher {
      * Encrypt a matrix.
      *
      * @param message the message
-     * @param key the key to use
-     * @param modulo the modulus to use
+     * @param key     the key to use
+     * @param modulo  the modulus to use
      * @return encrypted matrix
      */
     public static Matrix encrypt(Matrix message, Matrix key, int modulo) {
@@ -22,9 +22,9 @@ public class HillCipher {
     /**
      * Decrypt a matrix.
      *
-     * @param encrypted the encrypted matrix
+     * @param encrypted     the encrypted matrix
      * @param encryptionKey the encryption (not decryption) key
-     * @param modulo the modulus to use
+     * @param modulo        the modulus to use
      * @return decrypted matrix
      */
     public static Matrix decrypt(Matrix encrypted, Matrix encryptionKey, int modulo) {

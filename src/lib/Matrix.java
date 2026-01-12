@@ -7,10 +7,9 @@ import java.util.function.Function;
  * Immutable matrix.
  */
 public class Matrix {
-    private final double[][] data;
-
     public final int rows;
     public final int cols;
+    private final double[][] data;
 
     /**
      * Create a new matrix.

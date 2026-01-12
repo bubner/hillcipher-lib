@@ -38,7 +38,7 @@ public class MathUtil {
      * <p>
      * Also see: {@link Math#floorMod(int, int)}.
      *
-     * @param x the number
+     * @param x   the number
      * @param mod modulus value
      * @return x>0 modulus
      */

@@ -16,7 +16,7 @@ public class LetterMapping {
 
     /**
      * Create a new lib.LetterMapping.
-     * 
+     *
      * @param map The desired map to follow. See {{@link #newMapping()}} for a builder implementation.
      */
     public LetterMapping(HashMap<Integer, Character> map) {
@@ -28,8 +28,17 @@ public class LetterMapping {
     }
 
     /**
+     * Begins building a new letter mapping.
+     *
+     * @return Letter mapping builder
+     */
+    public static Builder newMapping() {
+        return new LetterMapping.Builder();
+    }
+
+    /**
      * Reads all elements from a matrix by rows and columns and maps them into a string by the mapping.
-     * 
+     *
      * @param m the matrix to read
      * @return the parsed string
      */
@@ -45,9 +54,9 @@ public class LetterMapping {
 
     /**
      * Converts a string into a mapped matrix, accounting for extra fill space to return a square matrix.
-     * 
-     * @param s the string to map
-     * @param rows the number of rows to use
+     *
+     * @param s        the string to map
+     * @param rows     the number of rows to use
      * @param fillCell the value to pad into the matrix to ensure it is square
      * @return a matrix that contains the mapped equivalent of the string
      */
@@ -69,15 +78,6 @@ public class LetterMapping {
     }
 
     /**
-     * Begins building a new letter mapping.
-     * 
-     * @return Letter mapping builder
-     */
-    public static Builder newMapping() {
-        return new LetterMapping.Builder();
-    }
-
-    /**
      * Letter mapping builder
      */
     public static class Builder {
@@ -85,8 +85,8 @@ public class LetterMapping {
 
         /**
          * Maps an integer to character for conversion.
-         * 
-         * @param i the integer
+         *
+         * @param i   the integer
          * @param out the character
          * @return this builder
          */
@@ -97,7 +97,7 @@ public class LetterMapping {
 
         /**
          * Create the letter mapping.
-         * 
+         *
          * @return a {@link LetterMapping}
          */
         public LetterMapping build() {
