@@ -1,3 +1,5 @@
+package lib;
+
 /**
  * Hill cipher implementation.
  */
@@ -11,7 +13,7 @@ public class HillCipher {
      * @return encrypted matrix
      */
     public static Matrix encrypt(Matrix message, Matrix key, int modulo) {
-        if (Math.abs(MathUtil.eea(key.determinant(), modulo)[0]) != 1) {
+        if (Math.abs(MathUtil.extendedEuclideanAlgorithm(key.determinant(), modulo)[0]) != 1) {
             throw new IllegalArgumentException("Determinant " + key.determinant() + " is a factor of modulo " + modulo + ".");
         }
         return key.times(message).map(v -> MathUtil.posMod(v, modulo));
@@ -26,7 +28,7 @@ public class HillCipher {
      * @return decrypted matrix
      */
     public static Matrix decrypt(Matrix encrypted, Matrix encryptionKey, int modulo) {
-        double x = MathUtil.posMod(MathUtil.eea(encryptionKey.determinant(), modulo)[1], modulo);
+        double x = MathUtil.posMod(MathUtil.extendedEuclideanAlgorithm(encryptionKey.determinant(), modulo)[1], modulo);
         Matrix kInverse = encryptionKey.adjugate()
                 .map(v -> v * x)
                 .map(v -> MathUtil.posMod(v, modulo));

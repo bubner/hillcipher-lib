@@ -1,3 +1,5 @@
+package lib;
+
 import java.util.Arrays;
 import java.util.function.Function;
 
@@ -117,7 +119,7 @@ public class Matrix {
      */
     public double determinant() {
         if (rows != cols) {
-            throw new IllegalArgumentException("Matrix must be square");
+            throw new IllegalArgumentException("lib.Matrix must be square");
         }
         if (rows == 1) {
             // det 1x1 = a
@@ -146,7 +148,7 @@ public class Matrix {
         double det = this.determinant();
         if (det == 0) {
             // Division by zero
-            throw new IllegalArgumentException("Matrix must be invertible");
+            throw new IllegalArgumentException("lib.Matrix must be invertible");
         }
         // Adjugate matrix with values divided by the determinant is the inverse
         return this.adjugate().map(v -> v / det);
@@ -159,7 +161,7 @@ public class Matrix {
      */
     public Matrix adjugate() {
         if (rows != cols) {
-            throw new IllegalArgumentException("Matrix must be square");
+            throw new IllegalArgumentException("lib.Matrix must be square");
         }
         double[][] cofactorMatrix = new double[rows][cols];
         for (int i = 0; i < rows; i++) {

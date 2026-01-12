@@ -1,3 +1,8 @@
+import lib.HillCipher;
+import lib.LetterMapping;
+import lib.Matrix;
+import lib.MatrixFactory;
+
 public class Main {
     public static void main(String[] args) {
         LetterMapping map = LetterMapping.newMapping()

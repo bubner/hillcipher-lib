@@ -4,4 +4,4 @@ A library of Java classes to implement the [Hill cipher](https://en.wikipedia.or
 
 Provides a letter mapping, static utilities, and matrices builder implementation to form cipher capabilities.
 
-See `Main.java` for usage.
+See `src/Main.java` for usage, and implementation in `src/lib`.

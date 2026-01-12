@@ -1,12 +1,14 @@
+package lib;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Matrix construction factory.
+ * lib.Matrix construction factory.
  */
 public class MatrixFactory {
     /**
-     * Create a new Matrix builder.
+     * Create a new lib.Matrix builder.
      * @return builder
      */
     public static Builder newMatrix() {
@@ -14,7 +16,7 @@ public class MatrixFactory {
     }
 
     /**
-     * Matrix utility builder.
+     * lib.Matrix utility builder.
      */
     public static class Builder {
         private final List<double[]> data = new ArrayList<>();
